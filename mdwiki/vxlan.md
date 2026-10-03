@@ -1,6 +1,6 @@
 # Configurando VXLAN com nmcli
 
-Guia prático para criar e remover um túnel **VXLAN (VLAN 999)** sobre uma rede L3 existente, usando `nmcli` no Linux. O cenário é conectar um notebook a uma bridge de overlay L2, sem precisar de IP no bridge.
+Guia prático para criar e remover um túnel **VXLAN (VLAN 999)** sobre uma rede L3 existente, usando `nmcli` no Linux.
 
 ## O que é VXLAN
 VXLAN (Virtual Extensible LAN) é um protocolo de encapsulamento que permite estender redes L2 sobre uma infraestrutura L3. Na prática, ele cria um túnel que transporta quadros Ethernet dentro de pacotes UDP, como se fosse uma "VLAN gigante" que atravessa roteadores.
