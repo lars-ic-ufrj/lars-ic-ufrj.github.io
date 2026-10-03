@@ -5,6 +5,9 @@ Guia prático para criar e remover um túnel **VXLAN (VLAN 999)** sobre uma rede
 ## O que é VXLAN
 VXLAN (Virtual Extensible LAN) é um protocolo de encapsulamento que permite estender redes L2 sobre uma infraestrutura L3. Na prática, ele cria um túnel que transporta quadros Ethernet dentro de pacotes UDP, como se fosse uma "VLAN gigante" que atravessa roteadores.
 
+## Uso prático:
+VXLAN pode ser usada para interligar duas máquinas virtuais em dois computadores diferentes de forma a utilizar a rede IP que esses computadores utilizam. Os computadores virtuais são interconectados como se um cabo fosse ligado entre eles utilizando os IPs das virtualizadoras hosts.
+
 ## Cenário
 
 - **VLAN ID:** `999`
@@ -17,7 +20,7 @@ VXLAN (Virtual Extensible LAN) é um protocolo de encapsulamento que permite est
 
 ## Pré-requisitos
 
-- Dois hosts com conectividade IP entre si (a rede subjacente, ou *underlay*).
+- Dois hosts com conectividade IP entre si (pela rede de baixo).
 - `nmcli` instalado (NetworkManager).
 - Privilégios de root ou `sudo`.
 - A porta `4789/UDP` liberada entre os peers.
@@ -26,8 +29,8 @@ VXLAN (Virtual Extensible LAN) é um protocolo de encapsulamento que permite est
 
 ```bash
 #!/bin/bash
-# Cria VXLAN vinda de uma bridge (cenário VLAN 999) para o notebook
-# Substitua os IPs de exemplo pelos do seu ambiente antes de rodar.
+# Cria VXLAN vinda de uma bridge (cenário VLAN 999)
+# Substitua os IPs de exemplo pelos do seu ambiente!!!!
 
 # 1. Criar o bridge de overlay (sem IP, só L2)
 nmcli connection add type bridge con-name br-vxlan-999 ifname br-vxlan-999 \
