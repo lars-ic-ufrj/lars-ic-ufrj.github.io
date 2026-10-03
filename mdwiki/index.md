@@ -5,9 +5,6 @@ Esta wiki reúne a documentação técnica do laboratório: guias de configuraç
 ## Como contribuir
 
 - Crie um arquivo `.md` com o nome do tópico (ex: `tópico.md`).
-- Ele deverá ser linkado partir do `navigation.md` ou desta página inicial.
+- Ele deverá ser linkado partir do `navigation.md`
 - Mantenha a linguagem objetiva e inclua exemplos de comandos sempre que possível.
-
-## Páginas
-
-- [Configurando VXLAN com nmcli](vxlan.md)
+- Mais informações sobre como funciona essa wiki em: https://dynalon.github.io/mdwiki/#!quickstart.md
