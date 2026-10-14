@@ -2,6 +2,8 @@
 
 Esta wiki é uma das formas de divulgação técnica do laboratório: guias de configuração, procedimentos operacionais e soluções para problemas. 
 
+Use o index para navegar!
+
 
 ## Como contribuir
 
